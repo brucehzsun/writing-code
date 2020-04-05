@@ -7,7 +7,9 @@ import static org.junit.jupiter.api.Assertions.*;
 class OrderTest {
     @Test
     void shoulBeAbleToCreateNewOrder() {
-        Order order = new Order(32);
+        String infoMsg = "from test";
+        Order order = new Order(32, infoMsg);
         assertNotNull(order);
+        assertEquals(infoMsg,order.getInfoMsg());
     }
 }
